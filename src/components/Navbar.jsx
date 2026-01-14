@@ -47,7 +47,7 @@ const Navbar = () => {
           {/* RIGHT: Call Now + WhatsApp */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="+91 9279046985"
+              href="tel:+919279046985"
               className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-green-700 to-emerald-500 text-white font-bold shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-[1px]"
             >
               📞 Call Now
@@ -66,13 +66,13 @@ const Navbar = () => {
           {/* MOBILE: only showing phone/whatsapp + menu not needed */}
           <div className="md:hidden flex gap-2">
             <a
-              href="tel:+919999999999"
+              href="tel:+919279046985"
               className="px-3 py-2 rounded-lg bg-green-700 text-white font-semibold"
             >
               📞
             </a>
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919279046985"
               target="_blank"
               rel="noreferrer"
               className="px-3 py-2 rounded-lg border border-green-700 text-green-700 font-semibold"
