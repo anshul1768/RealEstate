@@ -11,7 +11,7 @@ const PropertyGrid = () => {
       bath: 3,
       sqft: 3500,
       image:
-        "public/WhatsApp Image 2026-01-14 at 20.00.45.jpeg",
+        "/WhatsApp Image 2026-01-14 at 20.00.45.jpeg",
     },
     {
       name: "Ahinsa The Grand Green Valley",
@@ -21,7 +21,7 @@ const PropertyGrid = () => {
       bath: 2,
       sqft: 1800,
       image:
-        "public/WhatsApp Image 2026-01-14 at 20.00.46.jpeg",
+        "/WhatsApp Image 2026-01-14 at 20.00.46.jpeg",
     },
     {
       name: "Ahinsa Green Valley Empire",
@@ -31,7 +31,7 @@ const PropertyGrid = () => {
       bath: 2,
       sqft: 2200,
       image:
-        "public/WhatsApp Image 2026-01-14 at 20.00.47.jpeg",
+        "/WhatsApp Image 2026-01-14 at 20.00.47.jpeg",
     },
     {
       name: "Ahinsa Green Valley Orchid",
@@ -41,7 +41,7 @@ const PropertyGrid = () => {
       bath: 1,
       sqft: 900,
       image:
-        "public/WhatsApp Image 2026-01-14 at 20.05.00.jpeg",
+        "/WhatsApp Image 2026-01-14 at 20.05.00.jpeg",
     },
   ];
 
