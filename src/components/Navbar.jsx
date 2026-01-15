@@ -10,13 +10,14 @@ const Navbar = () => {
       {/* Navbar */}
       <div className="bg-white/80 backdrop-blur-xl border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-
+          
           {/* LEFT: Logo + Company Name */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative">
               <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-green-700 to-emerald-400 text-white font-extrabold flex items-center justify-center shadow-md transition-all duration-300 group-hover:scale-105 group-hover:-rotate-6">
                 GV
               </div>
+
               {/* Glow */}
               <div className="absolute -inset-1 rounded-2xl bg-green-400 blur opacity-20 group-hover:opacity-40 transition duration-300" />
             </div>
@@ -44,8 +45,19 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          {/* RIGHT: Call Now + WhatsApp */}
+          {/* RIGHT: Book Site Visit + Call Now + WhatsApp */}
           <div className="hidden md:flex items-center gap-3">
+            
+            {/* ✅ Book Site Visit Button (Call Now se pehle) */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScFHg1Fc6L2mCuTWfKogpeshMZEVVSgMapU1XAM_XvWfTUzdw/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noreferrer"
+              className="px-5 py-2.5 rounded-xl bg-white border-2 border-emerald-600 text-emerald-700 font-bold hover:bg-emerald-50 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-[1px]"
+            >
+              🏡 Book Site Visit
+            </a>
+
             <a
               href="tel:+919279046985"
               className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-green-700 to-emerald-500 text-white font-bold shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-[1px]"
@@ -63,7 +75,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* MOBILE: only showing phone/whatsapp + menu not needed */}
+          {/* MOBILE: Phone + Book Visit + WhatsApp */}
           <div className="md:hidden flex gap-2">
             <a
               href="tel:+919279046985"
@@ -71,6 +83,17 @@ const Navbar = () => {
             >
               📞
             </a>
+
+            {/* ✅ Mobile Book Visit */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScFHg1Fc6L2mCuTWfKogpeshMZEVVSgMapU1XAM_XvWfTUzdw/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noreferrer"
+              className="px-3 py-2 rounded-lg border border-emerald-600 text-emerald-700 font-semibold"
+            >
+              🏡
+            </a>
+
             <a
               href="https://wa.me/919279046985"
               target="_blank"
@@ -80,6 +103,7 @@ const Navbar = () => {
               💬
             </a>
           </div>
+
         </div>
       </div>
     </header>

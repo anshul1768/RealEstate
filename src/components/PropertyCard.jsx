@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PropertyCard = ({ item }) => {
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+    <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
       {/* Image */}
       <div className="relative">
         <img
@@ -15,11 +16,9 @@ const PropertyCard = ({ item }) => {
       </div>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-1">
         {/* Name */}
-        <h2 className="text-lg font-extrabold text-gray-900">
-          {item.name}
-        </h2>
+        <h2 className="text-lg font-extrabold text-gray-900">{item.name}</h2>
 
         {/* Location */}
         <div className="flex items-center gap-2 mt-1 text-gray-600">
@@ -45,6 +44,14 @@ const PropertyCard = ({ item }) => {
             📐 {item.sqft} sqft
           </span>
         </div>
+
+        {/* ✅ Button always at bottom */}
+        <Link
+          to={`/property/${item.id}`}
+          className="mt-auto pt-5 inline-flex w-full items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-green-700 to-emerald-500 text-white font-bold shadow-md hover:shadow-xl transition-all duration-300"
+        >
+          View Details →
+        </Link>
       </div>
     </div>
   );

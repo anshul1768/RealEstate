@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Instagram, Twitter, Facebook } from "lucide-react";
+import { Instagram, Twitter, Facebook, Linkedin } from "lucide-react";
+
 
 const Footer = () => {
   return (
@@ -67,27 +68,44 @@ const Footer = () => {
 
           <h3 className="text-lg font-bold text-white mt-8">Follow Us</h3>
           <div className="mt-4 flex gap-4">
-            <a
-              href="#"
-              className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-green-500 transition"
-            >
-              <Instagram size={20} />
-            </a>
+  <a
+    href="https://www.instagram.com/ahinsa_green_valley?igsh=NDVoc3B5a3htYWJw"
+    className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-green-500 transition"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <Instagram size={20} />
+  </a>
 
-            <a
-              href="#"
-              className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-green-500 transition"
-            >
-              <Twitter size={20} />
-            </a>
+  <a
+    href="https://x.com/AhinsaGreenVall"
+    className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-green-500 transition"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <Twitter size={20} />
+  </a>
 
-            <a
-              href="#"
-              className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-green-500 transition"
-            >
-              <Facebook size={20} />
-            </a>
-          </div>
+  <a
+    href="https://www.facebook.com/share/1DLGyPjHmo/"
+    className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-green-500 transition"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <Facebook size={20} />
+  </a>
+
+  {/* ✅ LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/ahinsa-green-valley-13a9293a4"
+    className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-green-500 transition"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <Linkedin size={20} />
+  </a>
+</div>
+
         </div>
       </div>
 

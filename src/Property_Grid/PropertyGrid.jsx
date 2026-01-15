@@ -4,6 +4,7 @@ import PropertyCard from "../components/PropertyCard";
 const PropertyGrid = () => {
   const properties = [
     {
+      id:1,
       name: "Ahinsa Green Valley",
       location: "Noida, UP",
       type: "Villa",
@@ -14,6 +15,7 @@ const PropertyGrid = () => {
         "/WhatsApp Image 2026-01-14 at 20.00.45.jpeg",
     },
     {
+      id:2,
       name: "Ahinsa The Grand Green Valley",
       location: "Gurgaon, Haryana",
       type: "Apartment",
@@ -24,6 +26,7 @@ const PropertyGrid = () => {
         "/WhatsApp Image 2026-01-14 at 20.00.46.jpeg",
     },
     {
+      id:3,
       name: "Ahinsa Green Valley Empire",
       location: "Delhi",
       type: "Independent House",
@@ -34,6 +37,7 @@ const PropertyGrid = () => {
         "/WhatsApp Image 2026-01-14 at 20.00.47.jpeg",
     },
     {
+      id:4,
       name: "Ahinsa Green Valley Orchid",
       location: "Lucknow, UP",
       type: "Studio",
