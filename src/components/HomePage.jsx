@@ -14,14 +14,14 @@ const HomePage = () => {
         <title>Ahinsa GreenValley | Plots & Villas</title>
         <meta name="description" content="Buy plots and villas in Ahinsa GreenValley. Book your site visit now." />
       </Helmet> */}
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       <PropertyGrid/>
       <PropertyCategories/>
       <ChooseUs/>
       <SimpleProcess/>
       <Testimonials/>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 };
