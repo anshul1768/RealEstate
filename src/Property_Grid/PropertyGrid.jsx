@@ -12,7 +12,7 @@ const PropertyGrid = () => {
       bath: 3,
       sqft: 3500,
       image:
-        "/WhatsApp Image 2026-01-14 at 20.00.45.jpeg",
+        "/WhatsApp Image 2026-01-14 at 20.00.47.jpeg",
     },
     {
       id:2,
@@ -23,7 +23,7 @@ const PropertyGrid = () => {
       bath: 2,
       sqft: 1800,
       image:
-        "/WhatsApp Image 2026-01-14 at 20.00.46.jpeg",
+        "/WhatsApp Image 2026-01-14 at 20.00.45.jpeg",
     },
     {
       id:3,
@@ -34,7 +34,7 @@ const PropertyGrid = () => {
       bath: 2,
       sqft: 2200,
       image:
-        "/WhatsApp Image 2026-01-14 at 20.00.47.jpeg",
+        "/WhatsApp Image 2026-01-14 at 20.00.46.jpeg",
     },
     {
       id:4,

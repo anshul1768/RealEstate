@@ -7,9 +7,14 @@ import ChooseUs from "../ChooseUs/ChooseUs";
 import SimpleProcess from "../Simple/SimpleProcess";
 import Testimonials from "./Testimonials";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet-async";
 const HomePage = () => {
   return (
     <>
+     {/* <Helmet>
+        <title>Ahinsa GreenValley | Plots & Villas</title>
+        <meta name="description" content="Buy plots and villas in Ahinsa GreenValley. Book your site visit now." />
+      </Helmet> */}
       <Navbar />
       <HeroSection />
       <PropertyGrid/>
