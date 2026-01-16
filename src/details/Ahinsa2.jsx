@@ -1,13 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Ahinsa2 = () => {
-  const images = [
-    "/WhatsApp Image 2026-01-15 at 14.45.06.jpeg",
-    "/WhatsApp Image 2026-01-15 at 14.45.07.jpeg",
-    "/WhatsApp Image 2026-01-15 at 14.45.08.jpeg",
-    "/WhatsApp Image 2026-01-15 at 14.45.09.jpeg",
+  const [selected, setSelected] = useState(null);
+
+  // ✅ 6 Images
+  const gallery = [
+    {
+      image: "/Ahinsa2/Picture1_Ahinsa2.png",
+      label: "Main Gate",
+    },
+    {
+      image: "/Ahinsa2/Picture2_Ahinsa2.jpg",
+      label: "Front 3D View",
+    },
+    {
+      image: "/Ahinsa2/Picture3_Ahinsa3.png",
+      label: "GYM and Swimming Pool",
+    },
+    {
+      image: "/Ahinsa2/Picture4_Ahinsa2.png",
+      label: "Box Cricket and Badminton",
+    },
+    {
+      image: "/Ahinsa2/Picture5_Ahinsa2.jpg",
+      label: "Square Mall",
+    },
+    {
+      image: "/Ahinsa2/Picture6_Ahinsa2.png",
+      label: "Master Layout",
+    },
   ];
+
+  // ✅ ESC press to close modal
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setSelected(null);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
+  // ✅ Location details
+  const locationDetails = {
+  title: "Location Advantage 📍",
+  subtitle:
+    "Discover a unique community on the outskirts of Agra, located along the Agra–Fatehabad Road, a direct route to the iconic Taj Mahal. This prestigious property offers the perfect balance of modern luxury and the tranquility of nature, with excellent connectivity to the city and surrounding attractions.",
+  points: [
+    "✅ All Connected Expressways",
+    "✅ 2 hr to Jewar Airport",
+    "✅ 15 min to Yamuna Expressway",
+    "✅ 10 min to Lucknow Expressway",
+    "✅ 30 min to Agra Airport",
+    "✅ 30 min to Agra Cantt Railway Station",
+    "✅ 25 min to Agra Fort Railway Station",
+    "✅ 15 min to Taj East Gate Metro",
+    "✅ 10 min to Jaypee Palace Hotel",
+    "✅ 5 min to DPS School",
+    "✅ 8 min to The International School",
+    "✅ 8 min to Agra Ring Road",
+  ],
+};
+
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-14">
@@ -30,39 +84,66 @@ const Ahinsa2 = () => {
         </p>
       </div>
 
-      {/* Image Grid */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
+      {/* ✅ Gallery Layout */}
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-5">
         {/* Big Image */}
-        <div className="md:col-span-2 relative overflow-hidden rounded-3xl shadow-md group">
+        <button
+          onClick={() => setSelected(gallery[0])}
+          className="lg:col-span-2 relative overflow-hidden rounded-3xl shadow-md group focus:outline-none"
+        >
           <img
-            src={images[0]}
+            src={gallery[0].image}
             alt="Ahinsa GreenValley"
-            className="w-full h-[360px] object-cover group-hover:scale-105 transition duration-500"
+            className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
-          <div className="absolute bottom-5 left-5 text-white">
-            <p className="text-sm font-semibold opacity-90">
-              Premium Living in Green Environment
-            </p>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+          <div className="absolute bottom-5 left-5 text-white text-left">
+            <p className="text-sm font-semibold opacity-90">{gallery[0].label}</p>
             <h2 className="text-2xl font-extrabold mt-1">
               Peaceful & Modern Lifestyle
             </h2>
           </div>
-        </div>
+        </button>
 
-        {/* 3 small images */}
-        <div className="grid grid-cols-1 gap-5">
-          {[1, 2, 3].map((idx) => (
-            <div
+        {/* ✅ 5 small images */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4">
+          {gallery.slice(1).map((item, idx) => (
+            <button
               key={idx}
-              className="relative overflow-hidden rounded-3xl shadow-md group"
+              onClick={() => setSelected(item)}
+              className="relative overflow-hidden rounded-3xl shadow-md group focus:outline-none"
             >
               <img
-                src={images[idx]}
-                alt={`Ahinsa GreenValley ${idx}`}
-                className="w-full h-[170px] object-cover group-hover:scale-105 transition duration-500"
+                src={item.image}
+                alt={`Gallery ${idx + 2}`}
+                className="w-full h-[140px] object-cover group-hover:scale-105 transition duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
+              <p className="absolute bottom-2 left-2 right-2 text-white text-xs font-bold leading-snug text-left">
+                {item.label}
+              </p>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* ✅ Location Advantage Section */}
+      <div className="mt-12 rounded-3xl bg-white border shadow-sm p-7">
+        <h2 className="text-2xl font-extrabold text-gray-900">
+          {locationDetails.title}
+        </h2>
+
+        <p className="mt-3 text-gray-600 leading-relaxed max-w-5xl">
+          {locationDetails.subtitle}
+        </p>
+
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {locationDetails.points.map((point, index) => (
+            <div
+              key={index}
+              className="rounded-2xl border bg-green-50/40 px-4 py-3 font-semibold text-gray-700"
+            >
+              {point}
             </div>
           ))}
         </div>
@@ -156,6 +237,42 @@ const Ahinsa2 = () => {
           </Link>
         </div>
       </div>
+
+      {/* ✅ Lightbox Modal (Image Fullscreen) */}
+      {selected && (
+        <div
+          onClick={() => setSelected(null)}
+          className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-5xl w-full"
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelected(null)}
+              className="absolute -top-12 right-0 text-white font-extrabold text-lg bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl"
+            >
+              ✕ Close
+            </button>
+
+            {/* Image */}
+            <img
+              src={selected.image}
+              alt={selected.label}
+              className="w-full max-h-[80vh] object-contain rounded-3xl shadow-2xl border border-white/10"
+            />
+
+            {/* Caption */}
+            <div className="mt-4 text-center text-white">
+              <p className="text-lg font-extrabold">{selected.label}</p>
+              <p className="text-white/70 text-sm mt-1">
+                Tap outside or press ESC to close
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
