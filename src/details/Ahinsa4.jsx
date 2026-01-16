@@ -1,25 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Ahinsa4 = () => {
-  const images = [
-    "/WhatsApp Image 2026-01-15 at 14.45.06.jpeg",
-    "/WhatsApp Image 2026-01-15 at 14.45.07.jpeg",
-    "/WhatsApp Image 2026-01-15 at 14.45.08.jpeg",
-    "/WhatsApp Image 2026-01-15 at 14.45.09.jpeg",
+  const [selected, setSelected] = useState(null);
+
+  // ✅ 5 Images
+  const gallery = [
+    { image: "/Ahinsa4/Picture1_Ahinsa4.png", label: "Picture 1" },
+    { image: "/Ahinsa4/Picture2_Ahinsa4.jpg", label: "Picture 2" },
+    { image: "/Ahinsa4/Picture3_Ahinsa4.png", label: "Picture 3" },
+    { image: "/Ahinsa4/Picture4_Ahinsa4.jpg", label: "Picture 4" },
+    { image: "/Ahinsa4/Picture5_Ahinsa4.png", label: "Picture 5" },
   ];
+
+  // ✅ Location Details
+  const locationDetails = {
+    title: "Location Advantage 📍",
+    subtitle:
+      "Discover a unique community on the outskirts of Agra, located along the Agra–Fatehabad Road, a direct route to the iconic Taj Mahal. This prestigious property offers the perfect balance of modern luxury and the tranquility of nature, with excellent connectivity to the city and surrounding attractions.",
+    points: [
+      "✅ All Connected Expressways",
+      "✅ 2 hr to Jewar Airport",
+      "✅ 15 min to Yamuna Expressway",
+      "✅ 10 min to Lucknow Expressway",
+      "✅ 30 min to Agra Airport",
+      "✅ 30 min to Agra Cantt Railway Station",
+      "✅ 25 min to Agra Fort Railway Station",
+      "✅ 15 min to Taj East Gate Metro",
+      "✅ 10 min to Jaypee Palace Hotel",
+      "✅ 5 min to DPS School",
+      "✅ 8 min to The International School",
+      "✅ 8 min to Agra Ring Road",
+    ],
+  };
+
+  // ✅ ESC press to close modal
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setSelected(null);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-14">
       {/* Heading */}
       <div className="text-center">
         <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 text-green-700 font-bold text-sm border border-green-100">
-          🌿 Ahinsa GreenValley
+          🌿 Ahinsa Green Valley Orchid
         </p>
 
         <h1 className="mt-4 text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
           Experience Nature + Comfort <br />
-          at <span className="text-green-700">Ahinsa GreenValley</span>
+          at <span className="text-green-700">Ahinsa Green Valley Orchid</span>
         </h1>
 
         <p className="mt-4 text-gray-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
@@ -30,39 +64,84 @@ const Ahinsa4 = () => {
         </p>
       </div>
 
-      {/* Image Grid */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
-        {/* Big Image */}
-        <div className="md:col-span-2 relative overflow-hidden rounded-3xl shadow-md group">
+      {/* ✅ Premium Mosaic Gallery (Ahinsa1 style) */}
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-5">
+        {/* ✅ Left Big Image */}
+        <button
+          onClick={() => setSelected(gallery[0])}
+          className="lg:col-span-7 relative overflow-hidden rounded-[28px] shadow-xl group focus:outline-none border border-gray-200"
+        >
           <img
-            src={images[0]}
-            alt="Ahinsa GreenValley"
-            className="w-full h-[360px] object-cover group-hover:scale-105 transition duration-500"
+            src={gallery[0].image}
+            alt={gallery[0].label}
+            loading="lazy"
+            className="w-full h-[520px] object-cover transition duration-700 group-hover:scale-[1.06]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
-          <div className="absolute bottom-5 left-5 text-white">
-            <p className="text-sm font-semibold opacity-90">
-              Premium Living in Green Environment
-            </p>
-            <h2 className="text-2xl font-extrabold mt-1">
-              Peaceful & Modern Lifestyle
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+          <div className="absolute top-5 left-5">
+            <span className="px-4 py-2 rounded-full bg-white/15 border border-white/20 text-white text-sm font-extrabold backdrop-blur-md">
+              📸 {gallery.length} Photos
+            </span>
+          </div>
+          <div className="absolute bottom-6 left-6 right-6 text-white text-left">
+            <p className="text-sm opacity-90 font-bold">{gallery[0].label}</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold mt-1">
+              Premium Project Gallery
             </h2>
           </div>
-        </div>
+        </button>
 
-        {/* 3 small images */}
-        <div className="grid grid-cols-1 gap-5">
-          {[1, 2, 3].map((idx) => (
-            <div
+        {/* ✅ Right Side Mosaic (4 images) */}
+        <div className="lg:col-span-5 grid grid-cols-2 gap-5">
+          {gallery.slice(1).map((item, idx) => (
+            <button
               key={idx}
-              className="relative overflow-hidden rounded-3xl shadow-md group"
+              onClick={() => setSelected(item)}
+              className="relative overflow-hidden rounded-[24px] shadow-lg group focus:outline-none border border-gray-200"
             >
               <img
-                src={images[idx]}
-                alt={`Ahinsa GreenValley ${idx}`}
-                className="w-full h-[170px] object-cover group-hover:scale-105 transition duration-500"
+                src={item.image}
+                alt={item.label}
+                loading="lazy"
+                className="w-full h-[250px] object-cover transition duration-700 group-hover:scale-[1.08]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-95" />
+
+              {/* Hover View Badge */}
+              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                <span className="px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-white text-xs font-extrabold border border-white/15">
+                  🔍 View
+                </span>
+              </div>
+
+              {/* Label */}
+              <div className="absolute bottom-3 left-3 right-3">
+                <p className="truncate px-3 py-1.5 rounded-full bg-white/15 border border-white/15 backdrop-blur-md text-white text-xs font-extrabold text-left">
+                  {item.label}
+                </p>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* ✅ Location Advantage Section */}
+      <div className="mt-12 rounded-3xl bg-white border shadow-sm p-7">
+        <h2 className="text-2xl font-extrabold text-gray-900">
+          {locationDetails.title}
+        </h2>
+
+        <p className="mt-3 text-gray-600 leading-relaxed max-w-5xl">
+          {locationDetails.subtitle}
+        </p>
+
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {locationDetails.points.map((point, index) => (
+            <div
+              key={index}
+              className="rounded-2xl border bg-green-50/40 px-4 py-3 font-semibold text-gray-700"
+            >
+              {point}
             </div>
           ))}
         </div>
@@ -156,6 +235,39 @@ const Ahinsa4 = () => {
           </Link>
         </div>
       </div>
+
+      {/* ✅ Lightbox Modal */}
+      {selected && (
+        <div
+          onClick={() => setSelected(null)}
+          className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-5xl w-full"
+          >
+            <button
+              onClick={() => setSelected(null)}
+              className="absolute -top-12 right-0 text-white font-extrabold text-lg bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl"
+            >
+              ✕ Close
+            </button>
+
+            <img
+              src={selected.image}
+              alt={selected.label}
+              className="w-full max-h-[80vh] object-contain rounded-3xl shadow-2xl border border-white/10"
+            />
+
+            <div className="mt-4 text-center text-white">
+              <p className="text-lg font-extrabold">{selected.label}</p>
+              <p className="text-white/70 text-sm mt-1">
+                Tap outside or press ESC to close
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

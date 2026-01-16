@@ -68,12 +68,12 @@ const Ahinsa2 = () => {
       {/* Heading */}
       <div className="text-center">
         <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 text-green-700 font-bold text-sm border border-green-100">
-          🌿 Ahinsa GreenValley
+          🌿 Ahinsa The Grand Green Valley
         </p>
 
         <h1 className="mt-4 text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
           Experience Nature + Comfort <br />
-          at <span className="text-green-700">Ahinsa GreenValley</span>
+          at <span className="text-green-700">Ahinsa The Grand Green Valley</span>
         </h1>
 
         <p className="mt-4 text-gray-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">

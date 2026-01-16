@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Company */}
         <div>
           <h2 className="text-2xl font-extrabold text-white">
-            Green <span className="text-green-400">Valley</span>
+            Ahinsa <span className="text-green-400">Green Valley</span>
           </h2>
           <p className="mt-3 text-gray-400 leading-relaxed">
             Your trusted partner in real estate. We help you buy, rent and sell
