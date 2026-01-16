@@ -7,7 +7,6 @@ import ChooseUs from "../ChooseUs/ChooseUs";
 import SimpleProcess from "../Simple/SimpleProcess";
 import Testimonials from "./Testimonials";
 import Footer from "./Footer";
-import { Helmet } from "react-helmet-async";
 const HomePage = () => {
   return (
     <>
