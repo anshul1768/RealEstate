@@ -1,17 +1,22 @@
 import React from "react";
-import { BadgeCheck, Zap } from "lucide-react";
+import { BadgeCheck, Landmark, HandCoins } from "lucide-react";
 
 const ChooseUs = () => {
   const features = [
     {
-      title: "Verified Properties",
-      desc: "100% genuine listings with complete verification and transparency.",
+      title: "Legally Compliant",
+      desc: "Legally compliant real estate business following Income Tax Section 143(1) & 80A norms.",
+      icon: <Landmark size={30} className="text-green-700" />,
+    },
+    {
+      title: "Zila Panchayat Approved",
+      desc: "The project has received approval from the Zila Panchayat, confirming land & development compliance with local government rules and regulations.",
       icon: <BadgeCheck size={30} className="text-green-700" />,
     },
     {
-      title: "Quick Process",
-      desc: "Fast paperwork & easy booking process with full support.",
-      icon: <Zap size={30} className="text-green-700" />,
+      title: "Easy Loan Facility",
+      desc: "Loan assistance is available from reputed banks and NBFCs, subject to eligibility and bank approval.",
+      icon: <HandCoins size={30} className="text-green-700" />,
     },
   ];
 
@@ -28,7 +33,7 @@ const ChooseUs = () => {
       </div>
 
       {/* Cards */}
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
         {features.map((item, index) => (
           <div
             key={index}
@@ -45,9 +50,7 @@ const ChooseUs = () => {
             </h3>
 
             {/* Desc */}
-            <p className="mt-2 text-gray-600 leading-relaxed">
-              {item.desc}
-            </p>
+            <p className="mt-2 text-gray-600 leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>

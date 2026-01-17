@@ -4,32 +4,17 @@ import { Link } from "react-router-dom";
 const Ahinsa2 = () => {
   const [selected, setSelected] = useState(null);
 
-  // ✅ 6 Images
+  // ✅ 9 Images
   const gallery = [
-    {
-      image: "/Ahinsa2/Picture1_Ahinsa2.png",
-      label: "Main Gate",
-    },
-    {
-      image: "/Ahinsa2/Picture2_Ahinsa2.jpg",
-      label: "Front 3D View",
-    },
-    {
-      image: "/Ahinsa2/Picture3_Ahinsa3.png",
-      label: "GYM and Swimming Pool",
-    },
-    {
-      image: "/Ahinsa2/Picture4_Ahinsa2.png",
-      label: "Box Cricket and Badminton",
-    },
-    {
-      image: "/Ahinsa2/Picture5_Ahinsa2.jpg",
-      label: "Square Mall",
-    },
-    {
-      image: "/Ahinsa2/Picture6_Ahinsa2.png",
-      label: "Master Layout",
-    },
+    { image: "/Ahinsa2/Picture1_Ahinsa2.png", label: "Main Gate" },
+    { image: "/Ahinsa2/Picture2_Ahinsa2.jpg", label: "Front 3D View" },
+    { image: "/Ahinsa2/Picture3_Ahinsa3.png", label: "GYM and Swimming Pool" },
+    { image: "/Ahinsa2/Picture4_Ahinsa2.png", label: "Box Cricket and Badminton" },
+    { image: "/Ahinsa2/Picture5_Ahinsa2.jpg", label: "Square Mall" },
+    { image: "/Ahinsa2/WhatsApp Image 2026-01-17 at 15.41.045.jpeg", label: "Playground" },
+    { image: "/Ahinsa2/WhatsApp Image 2026-01-17 at 15.41.04.jpeg", label: "Club House" },
+    { image: "/Ahinsa2/WhatsApp Image 2026-01-17 at 15.41.03.jpeg", label: "Victoria Circle Fountain" },
+    { image: "/Ahinsa2/Picture6_Ahinsa2.png", label: "Master Layout" },
   ];
 
   // ✅ ESC press to close modal
@@ -43,25 +28,31 @@ const Ahinsa2 = () => {
 
   // ✅ Location details
   const locationDetails = {
-  title: "Location Advantage 📍",
-  subtitle:
-    "Discover a unique community on the outskirts of Agra, located along the Agra–Fatehabad Road, a direct route to the iconic Taj Mahal. This prestigious property offers the perfect balance of modern luxury and the tranquility of nature, with excellent connectivity to the city and surrounding attractions.",
-  points: [
-    "✅ All Connected Expressways",
-    "✅ 2 hr to Jewar Airport",
-    "✅ 15 min to Yamuna Expressway",
-    "✅ 10 min to Lucknow Expressway",
-    "✅ 30 min to Agra Airport",
-    "✅ 30 min to Agra Cantt Railway Station",
-    "✅ 25 min to Agra Fort Railway Station",
-    "✅ 15 min to Taj East Gate Metro",
-    "✅ 10 min to Jaypee Palace Hotel",
-    "✅ 5 min to DPS School",
-    "✅ 8 min to The International School",
-    "✅ 8 min to Agra Ring Road",
-  ],
-};
+    title: "Location Advantage 📍",
+    subtitle:
+      "Discover a unique community on the outskirts of Agra, located along the Agra–Fatehabad Road, a direct route to the iconic Taj Mahal. This prestigious property offers the perfect balance of modern luxury and the tranquility of nature, with excellent connectivity to the city and surrounding attractions.",
+    points: [
+      "✅ All Connected Expressways",
+      "✅ 2 hr to Jewar Airport",
+      "✅ 15 min to Yamuna Expressway",
+      "✅ 10 min to Lucknow Expressway",
+      "✅ 30 min to Agra Airport",
+      "✅ 30 min to Agra Cantt Railway Station",
+      "✅ 25 min to Agra Fort Railway Station",
+      "✅ 15 min to Taj East Gate Metro",
+      "✅ 10 min to Jaypee Palace Hotel",
+      "✅ 5 min to DPS School",
+      "✅ 8 min to The International School",
+      "✅ 8 min to Agra Ring Road",
+    ],
+  };
 
+  // ✅ Map Links
+  const mapOpenUrl = "https://maps.app.goo.gl/9TRBuWg5YbYDMDku5";
+
+  // ✅ Embed link (iframe)
+  const mapEmbedUrl =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28288.99507257852!2d78.158!3d27.2322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39746f0075100abf%3A0x8cc9253ea6751170!2sAhinsa%20Green%20Valley%2C%20Dharera%2C%20Uttar%20Pradesh%20283202!5e0!3m2!1sen!2sin!4v1737170000000";
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-14">
@@ -84,44 +75,84 @@ const Ahinsa2 = () => {
         </p>
       </div>
 
-      {/* ✅ Gallery Layout */}
-      <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-5">
-        {/* Big Image */}
+      {/* ✅ Premium Mosaic Gallery (Ahinsa1 style) */}
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-5">
+        {/* ✅ Left Big Image */}
         <button
           onClick={() => setSelected(gallery[0])}
-          className="lg:col-span-2 relative overflow-hidden rounded-3xl shadow-md group focus:outline-none"
+          className="lg:col-span-7 relative overflow-hidden rounded-[28px] shadow-xl group focus:outline-none border border-gray-200"
         >
           <img
             src={gallery[0].image}
-            alt="Ahinsa GreenValley"
-            className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-500"
+            alt={gallery[0].label}
+            loading="lazy"
+            className="w-full h-[520px] object-cover transition duration-700 group-hover:scale-[1.06]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-          <div className="absolute bottom-5 left-5 text-white text-left">
-            <p className="text-sm font-semibold opacity-90">{gallery[0].label}</p>
-            <h2 className="text-2xl font-extrabold mt-1">
-              Peaceful & Modern Lifestyle
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+          <div className="absolute top-5 left-5">
+            <span className="px-4 py-2 rounded-full bg-white/15 border border-white/20 text-white text-sm font-extrabold backdrop-blur-md">
+              📸 {gallery.length} Photos
+            </span>
+          </div>
+          <div className="absolute bottom-6 left-6 right-6 text-white text-left">
+            <p className="text-sm opacity-90 font-bold">{gallery[0].label}</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold mt-1">
+              Premium Project Gallery
             </h2>
           </div>
         </button>
 
-        {/* ✅ 5 small images */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4">
-          {gallery.slice(1).map((item, idx) => (
+        {/* ✅ Right Side Mosaic (4 Images) */}
+        <div className="lg:col-span-5 grid grid-cols-2 gap-5">
+          {gallery.slice(1, 5).map((item, idx) => (
             <button
               key={idx}
               onClick={() => setSelected(item)}
-              className="relative overflow-hidden rounded-3xl shadow-md group focus:outline-none"
+              className="relative overflow-hidden rounded-[24px] shadow-lg group focus:outline-none border border-gray-200"
             >
               <img
                 src={item.image}
-                alt={`Gallery ${idx + 2}`}
-                className="w-full h-[140px] object-cover group-hover:scale-105 transition duration-500"
+                alt={item.label}
+                loading="lazy"
+                className="w-full h-[250px] object-cover transition duration-700 group-hover:scale-[1.08]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
-              <p className="absolute bottom-2 left-2 right-2 text-white text-xs font-bold leading-snug text-left">
-                {item.label}
-              </p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-95" />
+
+              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                <span className="px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-white text-xs font-extrabold border border-white/15">
+                  🔍 View
+                </span>
+              </div>
+
+              <div className="absolute bottom-3 left-3 right-3">
+                <p className="truncate px-3 py-1.5 rounded-full bg-white/15 border border-white/15 backdrop-blur-md text-white text-xs font-extrabold text-left">
+                  {item.label}
+                </p>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* ✅ Bottom Row Remaining Images */}
+        <div className="lg:col-span-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+          {gallery.slice(5).map((item, idx) => (
+            <button
+              key={idx}
+              onClick={() => setSelected(item)}
+              className="relative overflow-hidden rounded-[24px] shadow-lg group focus:outline-none border border-gray-200"
+            >
+              <img
+                src={item.image}
+                alt={item.label}
+                loading="lazy"
+                className="w-full h-[200px] object-cover transition duration-700 group-hover:scale-[1.1]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-95" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <p className="truncate px-3 py-1.5 rounded-full bg-white/15 border border-white/15 backdrop-blur-md text-white text-xs font-extrabold text-left">
+                  {item.label}
+                </p>
+              </div>
             </button>
           ))}
         </div>
@@ -149,7 +180,44 @@ const Ahinsa2 = () => {
         </div>
       </div>
 
-      {/* Description Box */}
+      {/* ✅ Map Section */}
+      <div className="mt-12 rounded-3xl bg-white border shadow-sm p-7">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <div>
+            <h2 className="text-2xl font-extrabold text-gray-900">
+              Project Location Map 🗺️
+            </h2>
+            <p className="mt-2 text-gray-600 leading-relaxed max-w-3xl">
+              Find the exact location of Ahinsa The Grand Green Valley and easily
+              navigate using Google Maps.
+            </p>
+          </div>
+
+          <a
+            href={mapOpenUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-gradient-to-r from-green-700 to-emerald-500 text-white font-extrabold shadow-md hover:shadow-xl transition"
+          >
+            📍 Open in Google Maps
+          </a>
+        </div>
+
+        <div className="mt-6 rounded-3xl overflow-hidden border shadow-sm">
+          <iframe
+            title="Ahinsa2 Location"
+            src={mapEmbedUrl}
+            width="100%"
+            height="520"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      {/* ✅ Remaining sections same */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left */}
         <div className="bg-white rounded-3xl border shadow-sm p-7">
@@ -164,21 +232,12 @@ const Ahinsa2 = () => {
           </p>
 
           <ul className="mt-5 space-y-3 text-gray-700 font-semibold">
-            <li className="flex items-center gap-2">
-              ✅ Green & peaceful environment
-            </li>
-            <li className="flex items-center gap-2">
-              ✅ Prime location with easy connectivity
-            </li>
-            <li className="flex items-center gap-2">
-              ✅ Residential plots & villas available
-            </li>
-            <li className="flex items-center gap-2">
-              ✅ High ROI investment opportunities
-            </li>
+            <li className="flex items-center gap-2">✅ Green & peaceful environment</li>
+            <li className="flex items-center gap-2">✅ Prime location with easy connectivity</li>
+            <li className="flex items-center gap-2">✅ Residential plots & villas available</li>
+            <li className="flex items-center gap-2">✅ High ROI investment opportunities</li>
           </ul>
 
-          {/* Buttons */}
           <div className="mt-7 flex flex-wrap gap-3">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScFHg1Fc6L2mCuTWfKogpeshMZEVVSgMapU1XAM_XvWfTUzdw/viewform?usp=publish-editor"
@@ -200,9 +259,7 @@ const Ahinsa2 = () => {
 
         {/* Right */}
         <div className="rounded-3xl bg-gradient-to-br from-green-700 to-emerald-500 p-8 text-white shadow-lg">
-          <h3 className="text-2xl font-extrabold">
-            Start Your Journey Today 🌿
-          </h3>
+          <h3 className="text-2xl font-extrabold">Start Your Journey Today 🌿</h3>
 
           <p className="mt-3 text-white/90 leading-relaxed">
             Book a site visit and explore the beauty of Ahinsa GreenValley
@@ -238,7 +295,7 @@ const Ahinsa2 = () => {
         </div>
       </div>
 
-      {/* ✅ Lightbox Modal (Image Fullscreen) */}
+      {/* ✅ Lightbox Modal */}
       {selected && (
         <div
           onClick={() => setSelected(null)}
@@ -248,7 +305,6 @@ const Ahinsa2 = () => {
             onClick={(e) => e.stopPropagation()}
             className="relative max-w-5xl w-full"
           >
-            {/* Close Button */}
             <button
               onClick={() => setSelected(null)}
               className="absolute -top-12 right-0 text-white font-extrabold text-lg bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl"
@@ -256,14 +312,12 @@ const Ahinsa2 = () => {
               ✕ Close
             </button>
 
-            {/* Image */}
             <img
               src={selected.image}
               alt={selected.label}
               className="w-full max-h-[80vh] object-contain rounded-3xl shadow-2xl border border-white/10"
             />
 
-            {/* Caption */}
             <div className="mt-4 text-center text-white">
               <p className="text-lg font-extrabold">{selected.label}</p>
               <p className="text-white/70 text-sm mt-1">

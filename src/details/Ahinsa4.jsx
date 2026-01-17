@@ -43,6 +43,13 @@ const Ahinsa4 = () => {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
+  // ✅ Map Links
+  const mapOpenUrl = "https://maps.app.goo.gl/fQ9JCTAjwu9akceq6";
+
+  // ✅ Embed link
+  const mapEmbedUrl =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28288.99507257852!2d78.158!3d27.2322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39746f0075100abf%3A0x8cc9253ea6751170!2sAhinsa%20Green%20Valley%2C%20Dharera%2C%20Uttar%20Pradesh%20283202!5e0!3m2!1sen!2sin!4v1737170000000";
+
   return (
     <section className="max-w-7xl mx-auto px-4 py-14">
       {/* Heading */}
@@ -64,7 +71,7 @@ const Ahinsa4 = () => {
         </p>
       </div>
 
-      {/* ✅ Premium Mosaic Gallery (Ahinsa1 style) */}
+      {/* ✅ Premium Mosaic Gallery */}
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-5">
         {/* ✅ Left Big Image */}
         <button
@@ -91,7 +98,7 @@ const Ahinsa4 = () => {
           </div>
         </button>
 
-        {/* ✅ Right Side Mosaic (4 images) */}
+        {/* ✅ Right Side Mosaic */}
         <div className="lg:col-span-5 grid grid-cols-2 gap-5">
           {gallery.slice(1).map((item, idx) => (
             <button
@@ -107,14 +114,12 @@ const Ahinsa4 = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-95" />
 
-              {/* Hover View Badge */}
               <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition duration-300">
                 <span className="px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-white text-xs font-extrabold border border-white/15">
                   🔍 View
                 </span>
               </div>
 
-              {/* Label */}
               <div className="absolute bottom-3 left-3 right-3">
                 <p className="truncate px-3 py-1.5 rounded-full bg-white/15 border border-white/15 backdrop-blur-md text-white text-xs font-extrabold text-left">
                   {item.label}
@@ -125,7 +130,7 @@ const Ahinsa4 = () => {
         </div>
       </div>
 
-      {/* ✅ Location Advantage Section */}
+      {/* ✅ Location Advantage */}
       <div className="mt-12 rounded-3xl bg-white border shadow-sm p-7">
         <h2 className="text-2xl font-extrabold text-gray-900">
           {locationDetails.title}
@@ -147,7 +152,44 @@ const Ahinsa4 = () => {
         </div>
       </div>
 
-      {/* Description Box */}
+      {/* ✅ Map Section */}
+      <div className="mt-12 rounded-3xl bg-white border shadow-sm p-7">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <div>
+            <h2 className="text-2xl font-extrabold text-gray-900">
+              Project Location Map 🗺️
+            </h2>
+            <p className="mt-2 text-gray-600 leading-relaxed max-w-3xl">
+              Find the exact location of Ahinsa Green Valley Orchid and easily
+              navigate using Google Maps.
+            </p>
+          </div>
+
+          <a
+            href={mapOpenUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-gradient-to-r from-green-700 to-emerald-500 text-white font-extrabold shadow-md hover:shadow-xl transition"
+          >
+            📍 Open in Google Maps
+          </a>
+        </div>
+
+        <div className="mt-6 rounded-3xl overflow-hidden border shadow-sm">
+          <iframe
+            title="Ahinsa4 Location"
+            src={mapEmbedUrl}
+            width="100%"
+            height="520"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      {/* ✅ Remaining Section */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left */}
         <div className="bg-white rounded-3xl border shadow-sm p-7">
@@ -162,21 +204,12 @@ const Ahinsa4 = () => {
           </p>
 
           <ul className="mt-5 space-y-3 text-gray-700 font-semibold">
-            <li className="flex items-center gap-2">
-              ✅ Green & peaceful environment
-            </li>
-            <li className="flex items-center gap-2">
-              ✅ Prime location with easy connectivity
-            </li>
-            <li className="flex items-center gap-2">
-              ✅ Residential plots & villas available
-            </li>
-            <li className="flex items-center gap-2">
-              ✅ High ROI investment opportunities
-            </li>
+            <li className="flex items-center gap-2">✅ Green & peaceful environment</li>
+            <li className="flex items-center gap-2">✅ Prime location with easy connectivity</li>
+            <li className="flex items-center gap-2">✅ Residential plots & villas available</li>
+            <li className="flex items-center gap-2">✅ High ROI investment opportunities</li>
           </ul>
 
-          {/* Buttons */}
           <div className="mt-7 flex flex-wrap gap-3">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScFHg1Fc6L2mCuTWfKogpeshMZEVVSgMapU1XAM_XvWfTUzdw/viewform?usp=publish-editor"
@@ -198,9 +231,7 @@ const Ahinsa4 = () => {
 
         {/* Right */}
         <div className="rounded-3xl bg-gradient-to-br from-green-700 to-emerald-500 p-8 text-white shadow-lg">
-          <h3 className="text-2xl font-extrabold">
-            Start Your Journey Today 🌿
-          </h3>
+          <h3 className="text-2xl font-extrabold">Start Your Journey Today 🌿</h3>
 
           <p className="mt-3 text-white/90 leading-relaxed">
             Book a site visit and explore the beauty of Ahinsa GreenValley

@@ -4,49 +4,33 @@ import PropertyCard from "../components/PropertyCard";
 const PropertyGrid = () => {
   const properties = [
     {
-      id:1,
-      name: "Ahinsa Green Valley",
-      location: "Noida, UP",
-      type: "Villa",
-      bhk: "4BHK",
-      bath: 3,
-      sqft: 3500,
-      image:
-        "/WhatsApp Image 2026-01-14 at 20.00.47.jpeg",
-    },
+  id: 1,
+  name: "Ahinsa Green Valley",
+  location: "Kuberpur, Agra (Near KP Institute, NH-2 Highway)",
+  startingPrice: "₹10,500 / sqft",
+  image: "/WhatsApp Image 2026-01-14 at 20.00.47.jpeg",
+},
+  {
+  id: 2,
+  name: "Ahinsa The Grand Green Valley",
+  location: "Kundol, Fatehabad, Agra, Uttar Pradesh 283111",
+  startingPrice: "₹16,500 / sqft",
+  image: "/WhatsApp Image 2026-01-14 at 20.00.45.jpeg",
+},
     {
-      id:2,
-      name: "Ahinsa The Grand Green Valley",
-      location: "Gurgaon, Haryana",
-      type: "Apartment",
-      bhk: "3BHK",
-      bath: 2,
-      sqft: 1800,
-      image:
-        "/WhatsApp Image 2026-01-14 at 20.00.45.jpeg",
-    },
+  id: 3,
+  name: "Ahinsa Green Valley Empire",
+  location: "Etmadpur–Khandoli Road, Mudi Chauraha, Agra, Uttar Pradesh 283202",
+  startingPrice: "₹14,500 / sqft",
+  image: "/WhatsApp Image 2026-01-14 at 20.00.46.jpeg",
+},
     {
-      id:3,
-      name: "Ahinsa Green Valley Empire",
-      location: "Delhi",
-      type: "Independent House",
-      bhk: "3BHK",
-      bath: 2,
-      sqft: 2200,
-      image:
-        "/WhatsApp Image 2026-01-14 at 20.00.46.jpeg",
-    },
-    {
-      id:4,
-      name: "Ahinsa Green Valley Orchid",
-      location: "Lucknow, UP",
-      type: "Studio",
-      bhk: "1BHK",
-      bath: 1,
-      sqft: 900,
-      image:
-        "/WhatsApp Image 2026-01-14 at 20.05.00.jpeg",
-    },
+  id: 4,
+  name: "Ahinsa Green Valley Orchid",
+  location: "Kuberpur, Agra (Near KP Institute, NH-2 Highway)",
+  startingPrice: "₹21,500 / sqft",
+  image: "/WhatsApp Image 2026-01-14 at 20.05.00.jpeg",
+},
   ];
 
   return (
