@@ -5,7 +5,7 @@ const HeroSection = () => {
   const images = [
     "/WhatsApp Image 2026-01-14 at 20.00.45.jpeg",
     "/WhatsApp Image 2026-01-14 at 20.00.46.jpeg",
-    "/WhatsApp Image 2026-01-14 at 20.00.47.jpeg",
+    "/slider_01.jpeg",
     "/WhatsApp Image 2026-01-14 at 20.05.00.jpeg",
   ];
 
