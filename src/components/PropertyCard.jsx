@@ -35,12 +35,12 @@ const PropertyCard = ({ item }) => {
         </div>
 
         {/* ✅ Price Section */}
-        <div className="mt-4">
+        {/* <div className="mt-4">
           <p className="text-sm text-gray-500 font-semibold">Starting Price</p>
           <p className="text-xl font-extrabold text-green-700">
             {item.startingPrice}
           </p>
-        </div>
+        </div> */}
 
         {/* ✅ Button always at bottom */}
         <Link

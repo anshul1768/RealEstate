@@ -15,7 +15,7 @@ const Ahinsa1 = () => {
     { image: "/Picture7_Ahinsa1.png", label: "Park" },
     { image: "/Picture8_Ahinsa1.png", label: "VS Public School" },
     { image: "/Picture9_Ahinsa1.jpg", label: "VSPS Mandir" },
-    { image: "/Picture10_Ahinsa1.png", label: "Fountain and Grand Park View" },
+    { image: "/Ahinsa1/WhatsApp Image 2026-01-18 at 11.41.31.jpeg", label: "Master Plan" },
   ];
 
   // ✅ ESC press to close modal

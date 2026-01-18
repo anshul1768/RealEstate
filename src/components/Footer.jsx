@@ -47,7 +47,7 @@ const Footer = () => {
           <div className="mt-4 space-y-3 text-gray-400 font-medium">
             <p>📞 +91 9279046985</p>
             <p>✉️ info@greenvalley.com</p>
-            <p>📍 Gurgaon, Haryana, India</p>
+            <p>📍 Hathras Rd, Ram Bhag Crossing, near petrol pump, Ram Bagh, Agra, Uttar Pradesh 282006</p>
           </div>
         </div>
 
