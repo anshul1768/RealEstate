@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
 
             <h1 className="text-xl font-extrabold tracking-tight">
-              Ahinsa <span className="text-lime-300">GreenValley</span>
+              Ahinsa <span className="text-lime-300">Green Valley</span>
             </h1>
           </Link>
 
