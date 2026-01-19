@@ -126,9 +126,25 @@ const Contact = () => {
           <iframe
             title="Office Location"
             className="w-full h-[380px]"
-            src="https://maps.app.goo.gl/xNWvJPaFtQw8Xq8i7?g_st=awb"
             loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            // ✅ IMPORTANT: maps.app.goo.gl nahi chalega, embed link lagega
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56636.055582138825!2d77.9649108!3d27.1766701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974770a5bff89d7%3A0x7f0a0c9bca5f6d6f!2sAgra%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1730000000000"
           ></iframe>
+        </div>
+
+        {/* ✅ Optional button */}
+        <div className="text-center mt-6">
+          <a
+            href="https://maps.google.com/?q=Agra,+Uttar+Pradesh"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-700 text-white font-extrabold shadow hover:shadow-xl transition"
+          >
+            <MapPin size={18} />
+            Open in Google Maps
+          </a>
         </div>
       </section>
     </div>
