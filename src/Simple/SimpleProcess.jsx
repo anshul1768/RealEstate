@@ -6,22 +6,22 @@ const SimpleProcess = () => {
     {
       title: "Search Property",
       desc: "Browse listings and find the perfect property for your needs.",
-      icon: <Search size={26} className="text-green-700" />,
+      icon: <Search size={26} className="text-lime-300" />,
     },
     {
       title: "Contact Us",
       desc: "Call or WhatsApp our team to get complete property details.",
-      icon: <PhoneCall size={26} className="text-green-700" />,
+      icon: <PhoneCall size={26} className="text-lime-300" />,
     },
     {
       title: "Visit & Choose",
       desc: "Schedule a site visit and finalize the property you love.",
-      icon: <Home size={26} className="text-green-700" />,
+      icon: <Home size={26} className="text-lime-300" />,
     },
     {
       title: "Finalize Deal",
       desc: "Smooth documentation and quick deal closure with support.",
-      icon: <FileCheck size={26} className="text-green-700" />,
+      icon: <FileCheck size={26} className="text-lime-300" />,
     },
   ];
 
@@ -43,19 +43,18 @@ const SimpleProcess = () => {
           <div
             key={index}
             className="
-              group relative bg-white rounded-2xl p-6 border
-              shadow-sm hover:shadow-2xl
+              group relative overflow-hidden rounded-2xl p-6
+              bg-gradient-to-br from-green-950 via-emerald-950 to-green-900
+              border border-white/10
+              shadow-lg hover:shadow-2xl
               transition-all duration-300 hover:-translate-y-2
-              overflow-hidden
             "
           >
-            {/* ✅ Glow Border on Hover */}
+            {/* ✅ Hover Glow */}
             <div
               className="
                 absolute inset-0 rounded-2xl
-                border-2 border-transparent
-                group-hover:border-green-400/70
-                group-hover:shadow-[0_0_30px_rgba(34,197,94,0.45)]
+                group-hover:shadow-[0_0_35px_rgba(163,230,53,0.25)]
                 transition-all duration-500
               "
             />
@@ -64,7 +63,7 @@ const SimpleProcess = () => {
             <div
               className="
                 absolute top-0 -left-[120%] w-[200%] h-full
-                bg-gradient-to-r from-transparent via-green-200/25 to-transparent
+                bg-gradient-to-r from-transparent via-white/10 to-transparent
                 rotate-12
                 group-hover:left-[120%]
                 transition-all duration-700
@@ -74,27 +73,28 @@ const SimpleProcess = () => {
             {/* Icon */}
             <div
               className="
-                relative z-10 w-14 h-14 rounded-2xl bg-green-50
-                flex items-center justify-center
+                relative z-10 w-14 h-14 rounded-2xl
+                bg-white/10 border border-white/15
+                flex items-center justify-center shadow-md
                 transition-all duration-300
                 group-hover:scale-110
-                group-hover:shadow-[0_0_18px_rgba(34,197,94,0.45)]
+                group-hover:shadow-[0_0_22px_rgba(163,230,53,0.55)]
               "
             >
               {item.icon}
             </div>
 
             {/* Text */}
-            <h3 className="relative z-10 mt-5 text-lg font-extrabold text-gray-900">
+            <h3 className="relative z-10 mt-5 text-lg font-extrabold text-white">
               {item.title}
             </h3>
 
-            <p className="relative z-10 mt-2 text-gray-600 leading-relaxed text-sm">
+            <p className="relative z-10 mt-2 text-white/70 leading-relaxed text-sm">
               {item.desc}
             </p>
 
             {/* ✅ Bottom Neon Line */}
-            <div className="relative z-10 mt-5 h-[3px] w-0 bg-gradient-to-r from-green-600 to-emerald-400 rounded-full group-hover:w-full transition-all duration-500" />
+            <div className="relative z-10 mt-5 h-[3px] w-0 bg-gradient-to-r from-lime-300 to-emerald-400 rounded-full group-hover:w-full transition-all duration-500" />
           </div>
         ))}
       </div>

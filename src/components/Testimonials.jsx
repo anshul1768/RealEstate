@@ -21,62 +21,76 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden py-16">
-      {/* ✅ Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-950 via-emerald-950 to-green-900" />
+    <section className="py-16 max-w-7xl mx-auto px-4">
+      {/* Heading */}
+      <div className="text-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+          Client Testimonials
+        </h2>
+        <p className="mt-3 text-gray-600 text-base md:text-lg">
+          What our clients say about Green Valley
+        </p>
+      </div>
 
-      {/* ✅ Glow Blobs */}
-      <div className="absolute -top-24 -left-24 w-72 h-72 bg-yellow-400/20 rounded-full blur-3xl" />
-      <div className="absolute top-20 right-0 w-80 h-80 bg-emerald-400/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-lime-400/10 rounded-full blur-3xl" />
-
-      {/* ✅ Content */}
-      <div className="relative max-w-7xl mx-auto px-4">
-        {/* Heading */}
-        <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-            Client Testimonials
-          </h2>
-          <p className="mt-3 text-white/70 text-base md:text-lg">
-            What our clients say about Green Valley
-          </p>
-        </div>
-
-        {/* Cards */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((item, index) => (
+      {/* Cards */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {testimonials.map((item, index) => (
+          <div
+            key={index}
+            className="
+              group relative overflow-hidden rounded-2xl p-6
+              bg-gradient-to-br from-green-950 via-emerald-950 to-green-900
+              border border-white/10
+              shadow-lg hover:shadow-2xl
+              transition-all duration-300 hover:-translate-y-2
+            "
+          >
+            {/* ✅ Hover Glow */}
             <div
-              key={index}
-              className="group bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/15
-              shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-            >
-              {/* ⭐ Rating */}
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    size={18}
-                    className="text-yellow-300 fill-yellow-300 drop-shadow-[0_0_8px_rgba(253,224,71,0.6)]"
-                  />
-                ))}
-              </div>
+              className="
+                absolute inset-0 rounded-2xl
+                group-hover:shadow-[0_0_35px_rgba(253,224,71,0.25)]
+                transition-all duration-500
+              "
+            />
 
-              {/* Text */}
-              <p className="mt-4 text-white/75 leading-relaxed">
-                “{item.text}”
-              </p>
+            {/* ✅ Shine Effect */}
+            <div
+              className="
+                absolute top-0 -left-[120%] w-[200%] h-full
+                bg-gradient-to-r from-transparent via-white/10 to-transparent
+                rotate-12
+                group-hover:left-[120%]
+                transition-all duration-700
+              "
+            />
 
-              {/* Name + Location */}
-              <div className="mt-6">
-                <h3 className="font-extrabold text-white">{item.name}</h3>
-                <p className="text-sm text-white/60">{item.location}</p>
-              </div>
-
-              {/* ✅ Neon Bottom Line */}
-              <div className="mt-5 h-[3px] w-0 bg-gradient-to-r from-yellow-300 to-emerald-400 rounded-full group-hover:w-full transition-all duration-500" />
+            {/* ⭐ Rating */}
+            <div className="relative z-10 flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  size={18}
+                  className="text-yellow-300 fill-yellow-300 drop-shadow-[0_0_8px_rgba(253,224,71,0.6)]"
+                />
+              ))}
             </div>
-          ))}
-        </div>
+
+            {/* Text */}
+            <p className="relative z-10 mt-4 text-white/75 leading-relaxed">
+              “{item.text}”
+            </p>
+
+            {/* Name + Location */}
+            <div className="relative z-10 mt-6">
+              <h3 className="font-extrabold text-white">{item.name}</h3>
+              <p className="text-sm text-white/60">{item.location}</p>
+            </div>
+
+            {/* ✅ Neon Bottom Line */}
+            <div className="relative z-10 mt-5 h-[3px] w-0 bg-gradient-to-r from-yellow-300 to-emerald-400 rounded-full group-hover:w-full transition-all duration-500" />
+          </div>
+        ))}
       </div>
     </section>
   );

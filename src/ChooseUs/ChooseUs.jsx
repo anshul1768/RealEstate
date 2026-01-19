@@ -21,56 +21,78 @@ const ChooseUs = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden py-16">
-      {/* ✅ Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-950 via-emerald-950 to-green-900" />
+    <section className="py-16 max-w-7xl mx-auto px-4">
+      {/* Heading */}
+      <div className="text-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+          Why Choose Us
+        </h2>
+        <p className="mt-3 text-gray-600 text-base md:text-lg">
+          Your trusted partner in real estate
+        </p>
+      </div>
 
-      {/* ✅ Glow Blobs */}
-      <div className="absolute -top-24 -left-24 w-72 h-72 bg-lime-400/20 rounded-full blur-3xl" />
-      <div className="absolute top-20 right-0 w-80 h-80 bg-emerald-400/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-green-500/10 rounded-full blur-3xl" />
-
-      {/* ✅ Content */}
-      <div className="relative max-w-7xl mx-auto px-4">
-        {/* Heading */}
-        <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-            Why Choose Us
-          </h2>
-          <p className="mt-3 text-white/70 text-base md:text-lg">
-            Your trusted partner in real estate
-          </p>
-        </div>
-
-        {/* Cards */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {features.map((item, index) => (
+      {/* Cards */}
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {features.map((item, index) => (
+          <div
+            key={index}
+            className="
+              group relative overflow-hidden rounded-2xl p-6
+              bg-gradient-to-br from-green-950 via-emerald-950 to-green-900
+              border border-white/10
+              shadow-lg hover:shadow-2xl
+              transition-all duration-300 hover:-translate-y-2
+            "
+          >
+            {/* ✅ Glow on hover */}
             <div
-              key={index}
-              className="group bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/15
-              shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="
+                absolute inset-0 rounded-2xl
+                group-hover:shadow-[0_0_35px_rgba(163,230,53,0.35)]
+                transition-all duration-500
+              "
+            />
+
+            {/* ✅ Shine effect */}
+            <div
+              className="
+                absolute top-0 -left-[120%] w-[200%] h-full
+                bg-gradient-to-r from-transparent via-white/10 to-transparent
+                rotate-12
+                group-hover:left-[120%]
+                transition-all duration-700
+              "
+            />
+
+            {/* Icon */}
+            <div
+              className="
+                relative z-10 w-14 h-14 rounded-2xl
+                bg-white/10 border border-white/15
+                flex items-center justify-center shadow-md
+                group-hover:scale-110
+                group-hover:shadow-[0_0_22px_rgba(163,230,53,0.55)]
+                transition-all duration-300
+              "
             >
-              {/* Icon */}
-              <div
-                className="w-14 h-14 rounded-2xl bg-white/10 border border-white/15 
-                flex items-center justify-center shadow-md group-hover:scale-110 transition-all duration-300"
-              >
-                {item.icon}
-              </div>
-
-              {/* Title */}
-              <h3 className="mt-4 text-xl font-extrabold text-white">
-                {item.title}
-              </h3>
-
-              {/* Desc */}
-              <p className="mt-2 text-white/70 leading-relaxed">{item.desc}</p>
-
-              {/* ✅ Bottom Neon Line */}
-              <div className="mt-5 h-[3px] w-0 bg-gradient-to-r from-lime-300 to-emerald-400 rounded-full group-hover:w-full transition-all duration-500" />
+              {item.icon}
             </div>
-          ))}
-        </div>
+
+            {/* Title */}
+            <h3 className="relative z-10 mt-4 text-xl font-extrabold text-white">
+              {item.title}
+            </h3>
+
+            {/* Desc */}
+            <p className="relative z-10 mt-2 text-white/70 leading-relaxed">
+              {item.desc}
+            </p>
+
+            {/* ✅ Bottom Neon Line */}
+            <div className="relative z-10 mt-5 h-[3px] w-0 bg-gradient-to-r from-lime-300 to-emerald-400 rounded-full group-hover:w-full transition-all duration-500" />
+          </div>
+        ))}
       </div>
     </section>
   );

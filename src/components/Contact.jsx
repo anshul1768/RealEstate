@@ -126,7 +126,7 @@ const Contact = () => {
           <iframe
             title="Office Location"
             className="w-full h-[380px]"
-            src="https://www.google.com/maps?q=Gurgaon,%20Haryana&output=embed"
+            src="https://maps.app.goo.gl/xNWvJPaFtQw8Xq8i7?g_st=awb"
             loading="lazy"
           ></iframe>
         </div>
