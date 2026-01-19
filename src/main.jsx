@@ -17,6 +17,7 @@ import Ahinsa2 from "./details/Ahinsa2.jsx";
 import Ahinsa3 from "./details/Ahinsa3.jsx";
 import Ahinsa4 from "./details/Ahinsa4.jsx";
 import Layout from "./Layout/Layout.jsx";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -34,5 +35,8 @@ const router = createBrowserRouter(
 );
 
 createRoot(document.getElementById("root")).render(
+  <>
   <RouterProvider router={router} />
+  </>
+  
 );
