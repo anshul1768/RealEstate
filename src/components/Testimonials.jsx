@@ -21,47 +21,62 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16">
-      {/* Heading */}
-      <div className="text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-          Client Testimonials
-        </h2>
-        <p className="mt-3 text-gray-600 text-base md:text-lg">
-          What our clients say about Green Valley
-        </p>
-      </div>
+    <section className="relative overflow-hidden py-16">
+      {/* ✅ Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-green-950 via-emerald-950 to-green-900" />
 
-      {/* Cards */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {testimonials.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl p-6 border shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-          >
-            {/* Rating */}
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  size={18}
-                  className="text-yellow-500 fill-yellow-500"
-                />
-              ))}
+      {/* ✅ Glow Blobs */}
+      <div className="absolute -top-24 -left-24 w-72 h-72 bg-yellow-400/20 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-80 h-80 bg-emerald-400/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-lime-400/10 rounded-full blur-3xl" />
+
+      {/* ✅ Content */}
+      <div className="relative max-w-7xl mx-auto px-4">
+        {/* Heading */}
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+            Client Testimonials
+          </h2>
+          <p className="mt-3 text-white/70 text-base md:text-lg">
+            What our clients say about Green Valley
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonials.map((item, index) => (
+            <div
+              key={index}
+              className="group bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/15
+              shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            >
+              {/* ⭐ Rating */}
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    size={18}
+                    className="text-yellow-300 fill-yellow-300 drop-shadow-[0_0_8px_rgba(253,224,71,0.6)]"
+                  />
+                ))}
+              </div>
+
+              {/* Text */}
+              <p className="mt-4 text-white/75 leading-relaxed">
+                “{item.text}”
+              </p>
+
+              {/* Name + Location */}
+              <div className="mt-6">
+                <h3 className="font-extrabold text-white">{item.name}</h3>
+                <p className="text-sm text-white/60">{item.location}</p>
+              </div>
+
+              {/* ✅ Neon Bottom Line */}
+              <div className="mt-5 h-[3px] w-0 bg-gradient-to-r from-yellow-300 to-emerald-400 rounded-full group-hover:w-full transition-all duration-500" />
             </div>
-
-            {/* Text */}
-            <p className="mt-4 text-gray-600 leading-relaxed">
-              “{item.text}”
-            </p>
-
-            {/* Name + Location */}
-            <div className="mt-6">
-              <h3 className="font-extrabold text-gray-900">{item.name}</h3>
-              <p className="text-sm text-gray-500">{item.location}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

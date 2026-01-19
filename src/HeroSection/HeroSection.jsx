@@ -11,7 +11,6 @@ const HeroSection = () => {
 
   const [current, setCurrent] = useState(0);
 
-  // Auto slide every 4 sec
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
@@ -29,22 +28,25 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-full h-[85vh] overflow-hidden">
-      {/* Carousel Images */}
+    // ✅ overflow-x-hidden most important
+    <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden overflow-x-hidden">
+      
+      {/* ✅ Slider Track */}
       <div
         className="flex h-full transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${current * 100}%)` }}
+        style={{ transform: `translate3d(-${current * 100}%,0,0)` }}
       >
         {images.map((img, idx) => (
-          <div key={idx} className="min-w-full h-full relative">
+          <div key={idx} className="relative w-full flex-shrink-0 h-full">
+            {/* ✅ Image Fix */}
             <img
               src={img}
               alt={`slide-${idx}`}
-              className="w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover object-center"
             />
 
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/45"></div>
+            <div className="absolute inset-0 bg-black/45" />
           </div>
         ))}
       </div>
@@ -57,11 +59,11 @@ const HeroSection = () => {
               Green Valley Real Estate
             </p>
 
-            <h1 className="mt-4 text-4xl md:text-6xl font-extrabold leading-tight">
+            <h1 className="mt-4 text-3xl md:text-6xl font-extrabold leading-tight">
               Find Your <span className="text-green-300">Dream Home</span> Today
             </h1>
 
-            <p className="mt-4 text-base md:text-lg text-white/90">
+            <p className="mt-4 text-sm md:text-lg text-white/90">
               Premium properties for buying, renting and selling. Trusted deals,
               best prices and smooth experience.
             </p>
@@ -88,20 +90,20 @@ const HeroSection = () => {
       {/* Prev/Next Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-white/35 text-white text-2xl flex items-center justify-center backdrop-blur transition"
+        className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 hover:bg-white/35 text-white text-2xl flex items-center justify-center backdrop-blur transition"
       >
         ‹
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-white/35 text-white text-2xl flex items-center justify-center backdrop-blur transition"
+        className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 hover:bg-white/35 text-white text-2xl flex items-center justify-center backdrop-blur transition"
       >
         ›
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-5 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {images.map((_, idx) => (
           <button
             key={idx}

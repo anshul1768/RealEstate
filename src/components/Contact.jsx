@@ -112,7 +112,7 @@ const Contact = () => {
               <MapPin className="text-green-700" />
             </div>
             <h3 className="mt-4 font-extrabold text-gray-900">Office</h3>
-            <p className="mt-1 text-gray-600">Gurgaon, Haryana</p>
+            <p className="mt-1 text-gray-600">Agra, UP</p>
             <p className="mt-1 text-gray-500 text-sm">
               (Office visit by appointment)
             </p>
