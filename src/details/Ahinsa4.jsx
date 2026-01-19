@@ -6,11 +6,11 @@ const Ahinsa4 = () => {
 
   // ✅ 5 Images
   const gallery = [
-    { image: "/Ahinsa4/Picture1_Ahinsa4.png", label: "Picture 1" },
-    { image: "/Ahinsa4/Picture2_Ahinsa4.jpg", label: "Picture 2" },
-    { image: "/Ahinsa4/Picture3_Ahinsa4.png", label: "Picture 3" },
-    { image: "/Ahinsa4/Picture4_Ahinsa4.jpg", label: "Picture 4" },
-    { image: "/Ahinsa4/Picture5_Ahinsa4.png", label: "Picture 5" },
+    { image: "/Ahinsa4/Picture1_Ahinsa4.png", label: "Main Gate" },
+    { image: "/Ahinsa4/Picture2_Ahinsa4.jpg", label: "Master Plan" },
+    { image: "/Ahinsa4/Picture3_Ahinsa4.png", label: "Box Cricket & Badminton" },
+    { image: "/Ahinsa4/Picture4_Ahinsa4.jpg", label: "Victoria Boundary Hall" },
+    { image: "/Ahinsa4/Picture5_Ahinsa4.png", label: "Villas" },
   ];
 
   // ✅ Location Details
