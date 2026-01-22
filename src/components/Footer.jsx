@@ -67,11 +67,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold text-white">Contact Us</h3>
           <div className="mt-4 space-y-3 text-gray-400 font-medium">
-            <p>📞 +91 9279046985</p>
+            <p>📞 +91 821 842 8395</p>
             <p>✉️ info@greenvalley.com</p>
             <p>
-              📍 Hathras Rd, Ram Bhag Crossing, near petrol pump, Ram Bagh, Agra,
-              Uttar Pradesh 282006
+              📍 Etmadpur -khadoli Road , mudi chauraha , Agra , Uttar Pradesh 283202
             </p>
           </div>
         </div>

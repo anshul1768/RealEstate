@@ -7,7 +7,7 @@ const PropertyGrid = () => {
   id: 1,
   name: "Ahinsa Green Valley",
   location: "Kuberpur, Agra (Near KP Institute, NH-2 Highway)",
-  startingPrice: "₹10,500 / sqyd",
+  startingPrice: "₹18,500 / sqyd",
   image: "/WhatsApp Image 2026-01-14 at 20.00.47.jpeg",
 },
   {

@@ -51,9 +51,9 @@ const HeroSection = () => {
       <div className="absolute inset-0 flex items-center">
         <div className="max-w-7xl mx-auto px-4 w-full">
           <div className="max-w-2xl text-white">
-            <p className="inline-flex px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur text-sm font-semibold">
+            {/* <p className="inline-flex px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur text-sm font-semibold">
               Green Valley Real Estate
-            </p>
+            </p> */}
 
             <h1 className="mt-4 text-3xl md:text-6xl font-extrabold leading-tight">
               Find Your{" "}

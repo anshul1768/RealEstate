@@ -131,7 +131,7 @@ const Contact = () => {
             </p>
 
             <a
-              href="https://wa.me/919279046985"
+              href="https://wa.me/918218428395"
               target="_blank"
               rel="noreferrer"
               className="relative z-10 mt-3 inline-block text-lime-300 font-bold hover:underline"

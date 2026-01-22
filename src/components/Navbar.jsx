@@ -69,7 +69,7 @@ const Navbar = () => {
 
             {/* Call Now Neon Glow */}
             <a
-              href="tel:+919279046985"
+              href="tel:+918218428395"
               className="px-5 py-2.5 rounded-xl bg-lime-300 text-green-950 font-bold 
               shadow-[0_0_20px_rgba(163,230,53,0.6)] 
               hover:shadow-[0_0_35px_rgba(163,230,53,0.9)] 
@@ -80,7 +80,7 @@ const Navbar = () => {
 
             {/* WhatsApp with Logo */}
             <a
-              href="https://wa.me/919279046985"
+              href="https://wa.me/918218428395"
               target="_blank"
               rel="noreferrer"
               className="px-5 py-2.5 rounded-xl border border-white/25 text-white font-bold 
@@ -96,7 +96,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center gap-3">
             {/* Call */}
             <a
-              href="tel:+919279046985"
+              href="tel:+918218428395"
               className="w-10 h-10 rounded-xl bg-lime-300 text-green-950 font-semibold 
               shadow-[0_0_15px_rgba(163,230,53,0.7)]
               flex items-center justify-center"
@@ -117,7 +117,7 @@ const Navbar = () => {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/919279046985"
+              href="https://wa.me/918218428395"
               target="_blank"
               rel="noreferrer"
               className="w-10 h-10 rounded-xl border border-white/25 text-white font-semibold 
