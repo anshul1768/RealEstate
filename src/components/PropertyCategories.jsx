@@ -37,7 +37,7 @@ const PropertyCategories = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 pb-16">
+    <section className="max-w-7xl mx-auto px-4 pb-8">
       {/* Heading */}
       <div className="text-center">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">

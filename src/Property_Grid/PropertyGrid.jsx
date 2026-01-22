@@ -34,7 +34,7 @@ const PropertyGrid = () => {
   ];
 
   return (
-    <section id="featured" className="max-w-7xl mx-auto px-4 py-14">
+    <section id="featured" className="max-w-7xl mx-auto px-4 pb-4">
       {/* Heading */}
       <div className="text-center">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
@@ -46,11 +46,11 @@ const PropertyGrid = () => {
       </div>
 
       {/* Property Grid */}
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {properties.map((item, index) => (
-          <PropertyCard key={index} item={item} />
-        ))}
-      </div>
+<div className="mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  {properties.map((item, index) => (
+    <PropertyCard key={index} item={item} />
+  ))}
+</div>
     </section>
   );
 };

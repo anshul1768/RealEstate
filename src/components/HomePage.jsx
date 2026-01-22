@@ -9,20 +9,13 @@ import Testimonials from "./Testimonials";
 import Footer from "./Footer";
 const HomePage = () => {
   return (
-    <>
-     {/* <Helmet>
-        <title>Ahinsa GreenValley | Plots & Villas</title>
-        <meta name="description" content="Buy plots and villas in Ahinsa GreenValley. Book your site visit now." />
-      </Helmet> */}
-      {/* <Navbar /> */}
+    <div className="space-y-2">   {/* ✅ gap control */}
       <HeroSection />
-      <PropertyGrid/>
-      <PropertyCategories/>
-      <ChooseUs/>
-      <SimpleProcess/>
-      <Testimonials/>
-      {/* <Footer/> */}
-    </>
+      <PropertyGrid />
+      <PropertyCategories />
+      <ChooseUs />
+      <Testimonials />
+    </div>
   );
 };
 

@@ -11,6 +11,7 @@ const HeroSection = () => {
 
   const [current, setCurrent] = useState(0);
 
+  // ✅ Auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
@@ -28,26 +29,20 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-full h-[70vh] md:h-[90vh] overflow-hidden overflow-x-hidden">
-      {/* Slider Track */}
+    <section className="relative w-full h-[70vh] md:h-[90vh] overflow-hidden">
+      {/* ✅ Slider Track */}
       <div
         className="flex h-full transition-transform duration-700 ease-in-out"
-        style={{ transform: `translate3d(-${current * 100}%,0,0)` }}
+        style={{ transform: `translate3d(-${current * 100}%, 0, 0)` }}
       >
         {images.map((img, idx) => (
           <div key={idx} className="relative w-full flex-shrink-0 h-full">
-            {/* ✅ Premium Gradient bg */}
-            <div className="absolute inset-0 bg-gradient-to-br from-green-950 via-emerald-950 to-green-900" />
-
-            {/* ✅ Image */}
+            {/* ✅ FULL IMAGE (cover full hero container) */}
             <img
               src={img}
               alt={`slide-${idx}`}
-              className="absolute inset-0 w-full h-full object-contain md:object-cover object-center"
+              className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
             />
-
-            {/* ✅ Overlay */}
-            <div className="absolute inset-0 bg-black/40" />
           </div>
         ))}
       </div>
@@ -72,29 +67,26 @@ const HeroSection = () => {
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              {/* ✅ Explore → Featured scroll */}
               <Link
                 to="/#featured"
-                className="
-                  px-6 py-3 rounded-xl bg-lime-300 text-green-950 font-extrabold
-                  shadow-[0_0_25px_rgba(163,230,53,0.6)]
-                  hover:shadow-[0_0_40px_rgba(163,230,53,0.9)]
-                  transition-all duration-300 hover:-translate-y-[2px]
-                "
+                className="px-6 py-3 rounded-xl bg-lime-300 text-green-950 font-extrabold
+                shadow-[0_0_25px_rgba(163,230,53,0.6)]
+                hover:shadow-[0_0_40px_rgba(163,230,53,0.9)]
+                transition-all duration-300 hover:-translate-y-[2px]"
               >
                 Explore Properties
               </Link>
 
               <Link
-                to="/contact"
-                className="
-                  px-6 py-3 rounded-xl border border-white/30 bg-white/10 backdrop-blur
-                  text-white font-extrabold hover:bg-white/15
-                  transition-all duration-300 hover:-translate-y-[2px]
-                "
-              >
-                Contact Now
-              </Link>
+  to="/contact"
+  className="
+    px-6 py-3 rounded-xl bg-gray-900 text-white font-extrabold
+    hover:bg-black transition-all duration-300 hover:-translate-y-[2px]
+    shadow-md hover:shadow-xl
+  "
+>
+  Contact Now
+</Link>
             </div>
 
             <div className="mt-10 h-[3px] w-44 bg-gradient-to-r from-lime-300 via-emerald-400 to-green-400 rounded-full shadow-[0_0_20px_rgba(34,197,94,0.55)]" />
@@ -102,23 +94,25 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Prev Button */}
+      {/* ✅ Prev Button */}
       <button
         onClick={prevSlide}
-        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/20 hover:bg-white/35 text-white text-2xl flex items-center justify-center backdrop-blur transition"
+        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full
+        bg-white/20 hover:bg-white/35 text-white text-2xl flex items-center justify-center backdrop-blur transition"
       >
         ‹
       </button>
 
-      {/* Next Button */}
+      {/* ✅ Next Button */}
       <button
         onClick={nextSlide}
-        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/20 hover:bg-white/35 text-white text-2xl flex items-center justify-center backdrop-blur transition"
+        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full
+        bg-white/20 hover:bg-white/35 text-white text-2xl flex items-center justify-center backdrop-blur transition"
       >
         ›
       </button>
 
-      {/* Dots */}
+      {/* ✅ Dots */}
       <div className="absolute bottom-5 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {images.map((_, idx) => (
           <button

@@ -21,7 +21,7 @@ const ChooseUs = () => {
   ];
 
   return (
-    <section className="py-16 max-w-7xl mx-auto px-4">
+    <section className="py-2 max-w-7xl mx-auto px-4">
       {/* Heading */}
       <div className="text-center">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
