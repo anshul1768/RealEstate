@@ -5,13 +5,13 @@ const HeroSection = () => {
   const images = [
     "/WhatsApp Image 2026-01-14 at 20.00.45.jpeg",
     "/WhatsApp Image 2026-01-14 at 20.00.46.jpeg",
-    "/slider_01.jpeg",
+    "/Ahinsa1/Gate01.jpeg",
     "/WhatsApp Image 2026-01-14 at 20.05.00.jpeg",
   ];
 
   const [current, setCurrent] = useState(0);
 
-  // ✅ Auto slide
+  // Auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
@@ -30,14 +30,13 @@ const HeroSection = () => {
 
   return (
     <section className="relative w-full h-[70vh] md:h-[90vh] overflow-hidden">
-      {/* ✅ Slider Track */}
+      {/* Slider Track */}
       <div
         className="flex h-full transition-transform duration-700 ease-in-out"
         style={{ transform: `translate3d(-${current * 100}%, 0, 0)` }}
       >
         {images.map((img, idx) => (
           <div key={idx} className="relative w-full flex-shrink-0 h-full">
-            {/* ✅ FULL IMAGE (cover full hero container) */}
             <img
               src={img}
               alt={`slide-${idx}`}
@@ -47,14 +46,16 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* ✅ HERO TEXT */}
-      <div className="absolute inset-0 flex items-center">
-        <div className="max-w-7xl mx-auto px-4 w-full">
+      {/* HERO TEXT (sirf LAST slide me niche) */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className={`max-w-7xl mx-auto px-4 w-full absolute left-1/2 -translate-x-1/2 pointer-events-auto ${
+            current === images.length - 1
+              ? "bottom-24 md:bottom-32"
+              : "top-1/2 -translate-y-1/2"
+          }`}
+        >
           <div className="max-w-2xl text-white">
-            {/* <p className="inline-flex px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur text-sm font-semibold">
-              Green Valley Real Estate
-            </p> */}
-
             <h1 className="mt-4 text-3xl md:text-6xl font-extrabold leading-tight">
               Find Your{" "}
               <span className="text-lime-300 drop-shadow-[0_0_18px_rgba(163,230,53,0.75)]">
@@ -78,15 +79,13 @@ const HeroSection = () => {
               </Link>
 
               <Link
-  to="/contact"
-  className="
-    px-6 py-3 rounded-xl bg-gray-900 text-white font-extrabold
-    hover:bg-black transition-all duration-300 hover:-translate-y-[2px]
-    shadow-md hover:shadow-xl
-  "
->
-  Contact Now
-</Link>
+                to="/contact"
+                className="px-6 py-3 rounded-xl bg-gray-900 text-white font-extrabold
+                hover:bg-black transition-all duration-300 hover:-translate-y-[2px]
+                shadow-md hover:shadow-xl"
+              >
+                Contact Now
+              </Link>
             </div>
 
             <div className="mt-10 h-[3px] w-44 bg-gradient-to-r from-lime-300 via-emerald-400 to-green-400 rounded-full shadow-[0_0_20px_rgba(34,197,94,0.55)]" />
@@ -94,7 +93,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* ✅ Prev Button */}
+      {/* Prev Button */}
       <button
         onClick={prevSlide}
         className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full
@@ -103,7 +102,7 @@ const HeroSection = () => {
         ‹
       </button>
 
-      {/* ✅ Next Button */}
+      {/* Next Button */}
       <button
         onClick={nextSlide}
         className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full
@@ -112,7 +111,7 @@ const HeroSection = () => {
         ›
       </button>
 
-      {/* ✅ Dots */}
+      {/* Dots */}
       <div className="absolute bottom-5 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {images.map((_, idx) => (
           <button

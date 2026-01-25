@@ -53,7 +53,7 @@ const Ahinsa1 = () => {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28288.99507257852!2d78.158!3d27.2322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39746f0075100abf%3A0x8cc9253ea6751170!2sAhinsa%20Green%20Valley%2C%20Dharera%2C%20Uttar%20Pradesh%20283202!5e0!3m2!1sen!2sin!4v1737170000000";
 
   const mapOpenUrl =
-    "https://www.google.com/maps/place/Ahinsa+Green+Valley,+Dharera,+Uttar+Pradesh+283202/@27.2322074,78.17292,17z";
+    "https://maps.app.goo.gl/6x9e1Snm5Xr3vcku6";
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-14">
