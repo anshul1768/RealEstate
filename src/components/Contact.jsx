@@ -37,7 +37,7 @@ const Contact = () => {
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="tel:+919279046985"
+              href="tel:+918218428395"
               className="
                 inline-flex items-center gap-2 px-6 py-3 rounded-xl 
                 bg-lime-300 text-green-950 font-extrabold
@@ -52,7 +52,7 @@ const Contact = () => {
 
             {/* ✅ WhatsApp with Logo */}
             <a
-              href="https://wa.me/919279046985"
+              href="https://wa.me/918218428395"
               target="_blank"
               rel="noreferrer"
               className="
@@ -103,7 +103,7 @@ const Contact = () => {
             <p className="relative z-10 mt-1 text-white/70">+91 9279046985</p>
 
             <a
-              href="tel:+919279046985"
+              href="tel:+918218428395"
               className="relative z-10 mt-3 inline-block text-lime-300 font-bold hover:underline"
             >
               Call Now →
