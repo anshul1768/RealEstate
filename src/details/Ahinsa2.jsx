@@ -159,26 +159,37 @@ const Ahinsa2 = () => {
       </div>
 
       {/* ✅ Location Advantage Section */}
-      <div className="mt-12 rounded-3xl bg-white border shadow-sm p-7">
-        <h2 className="text-2xl font-extrabold text-gray-900">
-          {locationDetails.title}
-        </h2>
+      <div className="mt-12 rounded-3xl bg-gradient-to-br from-green-700 to-emerald-500 border shadow-xl p-7 text-white">
+  <h2 className="text-2xl font-extrabold text-white">
+    {locationDetails.title}
+  </h2>
 
-        <p className="mt-3 text-gray-600 leading-relaxed max-w-5xl">
-          {locationDetails.subtitle}
-        </p>
+  <p className="mt-3 text-white/90 leading-relaxed max-w-5xl">
+    {locationDetails.subtitle}
+  </p>
 
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {locationDetails.points.map((point, index) => (
-            <div
-              key={index}
-              className="rounded-2xl border bg-green-50/40 px-4 py-3 font-semibold text-gray-700"
-            >
-              {point}
-            </div>
-          ))}
-        </div>
+  <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {locationDetails.points.map((point, index) => (
+      <div
+        key={index}
+        className="
+          rounded-2xl
+          border border-white/25
+          bg-white/10 backdrop-blur
+          px-4 py-3
+          font-semibold text-white
+          shadow-sm
+          hover:bg-white/20
+          transition-all duration-300
+          hover:-translate-y-[2px]
+        "
+      >
+        {point}
       </div>
+    ))}
+  </div>
+</div>
+
 
       {/* ✅ Map Section */}
       <div className="mt-12 rounded-3xl bg-white border shadow-sm p-7">

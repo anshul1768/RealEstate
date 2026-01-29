@@ -52,7 +52,7 @@ const Contact = () => {
 
             {/* ✅ WhatsApp with Logo */}
             <a
-              href="https://wa.me/918218428395"
+              href="https://wa.me/919279046985?text=Hi%2C%20I%20want%20to%20know%20details%20about%20your%20project%20Ahinsa%20Green%20Valley"
               target="_blank"
               rel="noreferrer"
               className="
@@ -100,7 +100,8 @@ const Contact = () => {
             <h3 className="relative z-10 mt-4 font-extrabold text-white">
               Phone
             </h3>
-            <p className="relative z-10 mt-1 text-white/70">+91 9279046985</p>
+            <p className="relative z-10 mt-1 text-white/70">
+            +918218428395</p>
 
             <a
               href="tel:+918218428395"
@@ -131,7 +132,7 @@ const Contact = () => {
             </p>
 
             <a
-              href="https://wa.me/918218428395"
+              href="https://wa.me/919279046985?text=Hi%2C%20I%20want%20to%20know%20details%20about%20your%20project%20Ahinsa%20Green%20Valley"
               target="_blank"
               rel="noreferrer"
               className="relative z-10 mt-3 inline-block text-lime-300 font-bold hover:underline"

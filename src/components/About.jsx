@@ -259,7 +259,7 @@ const About = () => {
 
             <div className="flex gap-3 flex-wrap">
               <a
-                href="tel:+919279046985"
+                href="tel:+918218428395"
                 className="
                   inline-flex items-center gap-2 px-6 py-3 rounded-xl 
                   bg-lime-300 text-green-950 font-extrabold
@@ -273,7 +273,7 @@ const About = () => {
               </a>
 
               <a
-                href="https://wa.me/919279046985"
+                href="https://wa.me/919279046985?text=Hi%2C%20I%20want%20to%20know%20details%20about%20your%20project%20Ahinsa%20Green%20Valley"
                 target="_blank"
                 rel="noreferrer"
                 className="
